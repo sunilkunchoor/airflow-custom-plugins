@@ -1,0 +1,15 @@
+package-name: custom_plugins
+name: Custom Plugins
+state: ready
+versions:
+  - 0.0.2
+  - 0.0.1
+plugins:
+  - name: databricks_custom
+    plugin-class: custom_plugins.databricks.plugins.databricks_workflow.DatabricksCustomPlugin
+  - name: bash_custom
+    plugin-class: custom_plugins.bash.plugins.google_search_return.OperatorExtraLinkPlugin
+
+extra-links:
+  - custom_plugins.databricks.plugins.databricks_workflow.DatabricksNotebookLink
+  - custom_plugins.bash.plugins.google_search_return.GoogleSearchXComLink
